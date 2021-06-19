@@ -1,0 +1,638 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    font-weight: 300;
+}
+section {
+    padding: 30px;
+}
+
+h1 h2 {
+    text-transform: uppercase;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.btn{
+    text-transform: uppercase;
+    padding: 10px 40px;
+    transition: 0.9s all ease-in-out;
+    color: white;
+    letter-spacing: 1.5px;
+    /************************************************ da se budu okrugla dugma *******************************************************/
+    border-radius: 8px;
+    /* sluzi da mozemo kao da kliknemo tu  */
+    cursor: pointer;
+}
+
+.blue {
+    background: linear-gradient(
+    45deg, 
+    rgb(98, 157, 209),
+    rgb(98, 157, 209),
+    rgb(98, 157, 209),
+    rgb(200, 218, 235),
+    rgb(98, 157, 209),
+    rgb(98, 157, 209),
+    rgb(98, 157, 209));
+    background-size: 400% 100%;
+    border: 2px solid white;
+ 
+}
+
+.blue:hover{
+   background-position: 100% 0;
+}
+
+.transparent {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0));
+    background-size: 400% 100%;
+    border: 2px solid white;
+}
+
+.transparent:hover {
+    background-position: 100% 0;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(106, 105, 105);
+}
+
+nav {
+    background: white;
+    padding: 10px 0;
+    /* da se fiksira na vrh da se ne pomera kad skrolamo */
+    position: sticky;
+    top: 0%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.57) ;
+    z-index: 10;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav .container ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav .container ul li {
+    margin: 0 15px;
+    padding: 8px;
+}
+
+nav ul li a {
+    letter-spacing: 1px;
+}
+
+nav .container .logo {
+    font-size: 1.6rem;
+}
+
+nav ul li:hover {
+    background-color: rgb(34, 57, 146);
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+/* on top */
+.onTop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1rem;
+    padding: 15px 10px;
+    background: rgba(50, 56, 209, 0.679);
+    color: white;
+    border-radius: 20px;
+    display: none;
+}
+/* header */
+
+header {
+    background: url(../slike/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    /**************************
+    ****************************
+     vh znaci da na svakom uredjaju zauzima onoliko koliko ste im dali ovom slucaju 70
+      ********************************************************************
+      *****************************/
+       display: flex; 
+       /* ovde treba display flex da bi se prebacilo na sredinu */
+      justify-content: center;
+      align-items: center;
+}
+
+header hgroup{
+    text-align: center;
+    color: white;
+}
+
+header hgroup h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+header hgroup h4 {
+    margin: 30px 0;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+
+header hgroup h4 span {
+    font-weight: 500;
+}
+
+header hgroup button {
+    margin: 0 20px;
+
+}
+/* about */
+
+.about hgroup {
+    text-align: center;
+    color: rgb(100, 100, 100);
+}
+
+.about hgroup h2 {
+    font-size: 2.3rem;
+}
+
+.about hgroup h4 {
+    font-size: 1.8rem;
+    margin: 30px 0;
+}
+
+.about .wraper {
+    
+    /* flex da bi bilo simetricno text a ne 1 ispod 2 */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cart {
+    /* ovo je ko sluzi da bi se razdvoio text */
+    flex: 0 0 30%;
+    border: 1px solid black;
+    padding: 20px 30px;
+}
+.cart i {
+    font-size: 2rem;
+    background-color: blue;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    border: 3px solid rgb(0, 0, 0); 
+    box-shadow: 0 0 1px black;
+    margin-left: 70px;
+    padding-top: 15px;
+}
+.cart .text{
+    margin: 20px 0;
+}
+
+.text h3 {
+    font-size: 1.5rem;
+}
+
+.text p {
+    /* da se razdvoje linije */
+    line-height: 1.5;
+    
+    margin-top: 20px;
+}
+
+/* slider */
+
+.slider {
+    background-color: rgb(13, 21, 11);
+    color: white;
+    text-align: center;
+    
+}
+
+.slider hgroup h2 {
+    font-style: 2.4rem;
+}
+
+.slider hgroup h4 {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slide-card {
+    flex: 0 0 60%;
+}
+
+.slide-card img {
+    width: 100%;
+    display: block;
+}
+.slide-text {
+    margin-top: 25px;
+    flex: 0 0 40%;
+}
+
+.slide-text p {
+    margin: 20px;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+
+.slide-text h4{
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+}
+
+/* three */
+
+.three {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.three article {
+    flex: 0 0 70%;
+   padding: 50px 50px 50px 0;
+
+}
+
+/* .three aside {
+    flex: 0 0 25%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+.three article h2 {
+    font-size: 2.2rem;
+}
+
+.three article p {
+    font-size: 1.1rem;
+    letter-spacing: 1.1px;
+    line-height: 1.8;
+}
+
+.three article img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+   
+}
+
+.three aside {
+    flex: 0 0 15%;
+    /* margin: 25px 0; */
+    text-align: center;
+    color:rgb(43, 103, 255);
+    display: flex; 
+    /* kad sam ovo stavio otisle su jedno ispod drugo */
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside h3 {
+    font-size: 2.4rem;
+}
+
+.card-social {
+    position: relative;
+    display: flex;
+    flex: 0 0 15%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-social hr {
+    width: 100%;
+}
+
+.card-text {
+    /* kad sam stavio absolute otislo je jedno ispod drugog */
+    position: absolute;
+    bottom: 0%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 8, 255);
+    width: 100%;
+    height: 35px;
+    height: 0;
+    transition: 0.9s all ease-in-out;
+}
+
+aside hr {
+    border: 1px solid rgb(34, 34, 247);
+}
+
+aside i {
+    font-size: 3rem;
+    
+}
+
+aside .card-text:hover i {
+    /* ovo sluzi da se poveca kad je na hover */
+    transform: scale(1.1);
+     color: rgb(41, 41, 41);
+}
+
+aside .card-social:hover .card-text {
+    height: 35px;
+    padding-top: 8px;
+}
+
+.transform i:hover {
+    transform: rotateY(180deg);
+        
+}
+/* footer */
+footer {
+    background: rgb(4, 19, 1);
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+}
+
+footer p span {
+    padding: 0 20px;
+    margin: 0 20px;
+    border-left: 1px solid white;
+    border-right: white 1px solid;
+}
+
+/* sing up */
+
+/* .sing-up{
+    background: url(../slike/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 82vh;
+    color: rgb(232, 232, 232);
+    text-align: center;
+}
+
+.sing-up h2 {
+    font-size: 2.5rem;
+
+}
+
+.sing-up form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: rgb(87, 64, 235);
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 50px;
+    overflow: hidden;
+    transform: translateX(-250%);
+    transition: 0.8s all ease;
+}
+
+.form-slideIn {
+    transform: translateX(0%) !important;
+}
+
+form h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+form label {
+    
+     position: relative; 
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+form label, form button, form h3 {
+    opacity: 0;
+}
+
+.opacity {
+    opacity: 1 !important;
+}
+
+form label i {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    margin-bottom: 30px;
+
+}
+
+form label input {
+    padding: 5px 0 5px 40px;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+input::placeholder {
+    font-size: 1rem;
+    letter-spacing: 2px;
+} */
+
+
+
+@media(max-width:500px) {
+
+    .container {
+        width: 90%;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+    }
+
+    hgroup h2 {
+        font-size: 1.8rem !important;
+    }
+
+    hgroup h4 {
+        font-size: 1.4rem !important;
+    }
+
+    nav .container {
+        justify-content: center;
+    }
+    nav .container ul li {
+        margin: 0 5px;
+        padding: 8px;
+    }
+    nav ul li a {
+        letter-spacing: 1px;
+    }
+
+    header hgroup h4{
+        margin: 30px 0;
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        text-transform: uppercase;
+        padding: 5px 20px;
+        letter-spacing: 1.2px;
+        font-size: 1rem;
+    }
+
+    .about .wraper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cart {
+        flex: 0 0 30%;
+        margin-bottom: 30px;
+    }
+
+    .cart i {
+        justify-content: center;
+        text-align: center;
+         margin: 3px 30px 5px 30px; 
+    }
+
+    .text p {
+        line-height: 1.1;
+        margin-top: 16px;
+    }
+
+    .text h3 {
+        margin-bottom: 20px;
+    }
+
+    .item {
+        display: flex;
+    }
+
+    .slide-card {
+        flex: 0 0 100%;
+    }
+
+    .slide-text {
+        flex: 0 0 100%;
+    }
+
+    .three article  {
+       flex: 0 0 100%;
+       padding: 30px 0;
+    }
+
+     /* .three aside {
+        flex: 0 0 100%;
+        flex-direction: row;
+        height: 100%;
+        justify-content: center;
+    }
+
+    aside h3 {
+        flex: 0 0 100%;
+        margin-bottom: 40px;
+        font-size: 2.4rem;
+        flex-wrap: wrap;
+    }
+
+    .card-social {
+        flex: 0 0 50%;
+        flex-direction: column;
+        height: 100px; 
+        justify-content: space-between;
+        margin-bottom: 30px; 
+        flex-wrap: wrap;
+    } */
+
+    .three article  {
+        flex: 0 0 100%;
+        padding: 30px 0;
+    }
+
+    .three aside {
+        flex: 0 0 100%;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    aside h3 {
+        font-size: 2.4rem;
+        flex: 0 0 100%;
+        margin-bottom: 40px;
+    }
+
+    .card-social {
+        flex: 0 0 45%;
+        flex-direction: column;
+        height: 150px;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+
+
+   
+     .card-social hr {
+        width: 100%;
+     }
+
+}
